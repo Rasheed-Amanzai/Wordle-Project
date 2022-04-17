@@ -10,14 +10,15 @@ namespace Wordle_Project
 
         public int CurrentTurn { get; private set; }
 
-        public Player WordlePlayer = new Player();
+        public Player PlayerObj = new Player();
+
+        public Word WordObj = new Word();
 
         public void StartGame()
         {
             CurrentTurn = 0;
             
-            Word word = new Word();
-            word.GenerateTargetWord();
+            WordObj.GenerateTargetWord();
         }
     }
 }

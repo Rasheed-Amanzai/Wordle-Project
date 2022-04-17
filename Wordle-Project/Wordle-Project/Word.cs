@@ -9,10 +9,10 @@ namespace Wordle_Project
     public class Word
     {
         // List of common words that the program will choose from as the word that needs to be guessed
-        private List<string> _usuableWords = File.ReadAllLines(@"UsuableWords.txt").ToList();
+        private List<string> _usuableWords = File.ReadAllLines("UsuableWords.txt").ToList();
 
         // Full list of words, any of these words will be viable as a guess
-        private List<string> _fullWordList = File.ReadAllLines(@"FullWordList.txt").ToList();
+        public List<string> FullWordList = File.ReadAllLines("FullWordList.txt").ToList();
 
         // The word that the player has to guess
         public string TargetWord { get; private set; }
@@ -24,23 +24,51 @@ namespace Wordle_Project
             TargetWord = _usuableWords[index];
         }
 
-        public int CheckPlayersGuess(string guess)
+        public List<string> CheckPlayersGuess(string guess)
         {
             if (guess == TargetWord)
             {
-                // Guess is correct
-                return 1;
+                // Guess is correct (All green)
+                return new List<string>() { "#179317", "#179317", "#179317", "#179317", "#179317" };
             }
-            else if (_fullWordList.Contains(guess))
+            else if (FullWordList.Contains(guess))
             {
                 // Guess is incorrect, but is a valid word
-                return 2;
+                return GetWordFeedback(guess);
             }
             else
             {
                 // Guess is a invalid word
-                return 3;
+                return new List<string>();
             }
+        }
+
+        private List<string> GetWordFeedback(string guess)
+        {
+            var wordFeedback = new List<string>();
+            char[] guessChars = guess.ToCharArray(); // Convert the guess word into a array of its characters
+            char[] targetChars = TargetWord.ToCharArray(); // Convert the target word into a array of its characters
+
+            for (int i = 0; i < guessChars.Length; i++)
+            {
+                if (guessChars[i] == targetChars[i])
+                {
+                    // Character in the word and in the correct position (Green)
+                    wordFeedback.Add("#179317");
+                }
+                else if (targetChars.Contains(guessChars[i]))
+                {
+                    // Character in the word, but in the incorrect position (Yellow)
+                    wordFeedback.Add("#cc9c1d");
+                }
+                else
+                {
+                    // Character is not in the word (Grey)
+                    wordFeedback.Add("#696969");
+                }
+            }
+
+            return wordFeedback;
         }
     }
 }
