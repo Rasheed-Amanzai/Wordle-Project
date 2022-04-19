@@ -5,9 +5,12 @@
 
     <StackLayout>
 
-        <Entry x:Name="wordEntry" Placeholder="Enter a 5-Letter Word"/>
-        <Button Text="Enter" Clicked="Button_Clicked"/>
-        <Label x:Name="gameMessage" Text="[Game Messages Here]" HorizontalTextAlignment="Center" FontSize="Title" Padding="30,10,30,30"/>
+        <StackLayout HorizontalOptions="Center" Orientation="Horizontal" Padding="0, 10, 0, 0">
+            <Entry x:Name="wordEntry" Placeholder="Enter a 5 Letter Word"/>
+            <Button Text="Enter" Clicked="Enter_Clicked"/>
+        </StackLayout>
+
+        <Label x:Name="gameMessage" Text="[Game Messages Here]" HorizontalTextAlignment="Center" FontSize="20" Padding="30,10,30,30"/>
         
         <StackLayout x:Name="row1Stack" HorizontalOptions="Center" Orientation="Horizontal">
             <Frame Background="#444444">
@@ -175,6 +178,11 @@
                    HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
                    HeightRequest="40"/>
             </Frame>
+        </StackLayout>
+
+        <StackLayout HorizontalOptions="Center" Orientation="Horizontal" Padding="0, 10, 0, 0">
+            <Button Text="Reset" Clicked="Reset_Clicked"/>
+            <Button Text="Main Menu" Clicked="MainMenu_Clicked"/>
         </StackLayout>
 
     </StackLayout>

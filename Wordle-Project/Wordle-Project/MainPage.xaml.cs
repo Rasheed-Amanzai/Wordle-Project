@@ -10,16 +10,17 @@ namespace Wordle_Project
 {
     public partial class MainPage : ContentPage
     {
-        Game game = new Game();
+        //Game game = new Game();
 
         public MainPage()
         {
             InitializeComponent();
-            game.StartGame();
+            //game.StartGame();
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private void Enter_Clicked(object sender, EventArgs e)
         {
+            Game game = new Game();
             if (game.WordObj.FullWordList.Contains(wordEntry.Text))
             {
                 var guessFeedback = game.WordObj.CheckPlayersGuess(wordEntry.Text);
@@ -34,6 +35,16 @@ namespace Wordle_Project
             {
                 gameMessage.Text = "Invalid Input!";
             }
+        }
+
+        private void Reset_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MainMenu_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new WelcomePage());
         }
     }
 }
