@@ -7,5 +7,6 @@ namespace Wordle_Project
     public class Stats
     {
 
+
     }
 }
