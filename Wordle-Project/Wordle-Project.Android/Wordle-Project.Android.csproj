@@ -16,7 +16,6 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v12.0</TargetFrameworkVersion>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidUseAapt2>true</AndroidUseAapt2>
@@ -88,7 +87,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Wordle-Project\Wordle-Project.csproj">
-      <Project>{7928BD46-A247-4BC1-849F-B112A151FDC8}</Project>
+      <Project>{8046EAD8-B90F-4D9C-A886-EF49B8DB251E}</Project>
       <Name>Wordle-Project</Name>
     </ProjectReference>
   </ItemGroup>
