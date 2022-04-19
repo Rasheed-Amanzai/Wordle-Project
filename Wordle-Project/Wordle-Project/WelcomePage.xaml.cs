@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 using Xamarin.Forms;
 
-namespace WordleProject
+namespace Wordle_Project
 {
     public partial class WelcomePage : ContentPage
     {

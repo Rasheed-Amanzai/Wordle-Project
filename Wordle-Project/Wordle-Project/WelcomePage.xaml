@@ -2,7 +2,7 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="WordleProject.WelcomePage">
+    x:Class="Wordle_Project.WelcomePage">
     <StackLayout>
         <Frame BackgroundColor="LightGray" Padding="24" CornerRadius="10">
             <Label Text="WELCOME TO  " HorizontalTextAlignment="Center" TextColor="Black" FontAttributes="Bold"  FontSize="36"/>
