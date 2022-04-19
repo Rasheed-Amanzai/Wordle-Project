@@ -3,5 +3,101 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="Wordle_Project.InstructionPage">
-   
+
+    <StackLayout>
+        <Label Text="HOW TO PLAY" HorizontalTextAlignment="Center" FontSize="Title" FontAttributes="Bold" Padding="0,20,0,10"/>
+        <Label Text="Guess the WORDLE in 6 tries. After each guess, the colour of the tiles will change to show how close your guess was to the word." FontSize="20" Padding="20,0,20,20"/>
+
+        <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+            <Frame Background="#179317">
+                <Label Text="P" FontSize="30" WidthRequest="30"
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                   HeightRequest="40"/>
+            </Frame>
+            <Frame Background="#444444">
+                <Label Text="I" FontSize="30" WidthRequest="30"
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                   HeightRequest="40"/>
+            </Frame>
+            <Frame Background="#444444">
+                <Label Text="Z" FontSize="30" WidthRequest="30"
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                   HeightRequest="40"/>
+            </Frame>
+            <Frame Background="#444444">
+                <Label Text="Z" FontSize="30" WidthRequest="30"
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                   HeightRequest="40"/>
+            </Frame>
+            <Frame Background="#444444">
+                <Label Text="A" FontSize="30" WidthRequest="30"
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                   HeightRequest="40"/>
+            </Frame>
+        </StackLayout>
+
+        <Label Text="The letter P is in the word and in the correct spot" HorizontalTextAlignment="Center" FontSize="20" Padding="20,10,20,10"/>
+
+        <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+            <Frame Background="#444444">
+                <Label Text="S" FontSize="30" WidthRequest="30"
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                   HeightRequest="40"/>
+            </Frame>
+            <Frame Background="#444444">
+                <Label Text="W" FontSize="30" WidthRequest="30"
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                   HeightRequest="40"/>
+            </Frame>
+            <Frame Background="#cc9c1d">
+                <Label Text="O" FontSize="30" WidthRequest="30"
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                   HeightRequest="40"/>
+            </Frame>
+            <Frame Background="#444444">
+                <Label Text="R" FontSize="30" WidthRequest="30"
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                   HeightRequest="40"/>
+            </Frame>
+            <Frame Background="#444444">
+                <Label Text="D" FontSize="30" WidthRequest="30"
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                   HeightRequest="40"/>
+            </Frame>
+        </StackLayout>
+
+        <Label Text="The letter O is in the word, but in the wrong spot" HorizontalTextAlignment="Center" FontSize="20" Padding="20,10,20,10"/>
+
+        <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+            <Frame Background="#444444">
+                <Label Text="G" FontSize="30" WidthRequest="30"
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                   HeightRequest="40"/>
+            </Frame>
+            <Frame Background="#444444">
+                <Label Text="I" FontSize="30" WidthRequest="30"
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                   HeightRequest="40"/>
+            </Frame>
+            <Frame Background="#444444">
+                <Label Text="A" FontSize="30" WidthRequest="30"
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                   HeightRequest="40"/>
+            </Frame>
+            <Frame Background="#696969">
+                <Label Text="N" FontSize="30" WidthRequest="30"
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                   HeightRequest="40"/>
+            </Frame>
+            <Frame Background="#444444">
+                <Label Text="T" FontSize="30" WidthRequest="30"
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                   HeightRequest="40"/>
+            </Frame>
+        </StackLayout>
+
+        <Label Text="The letter N is not in the word" HorizontalTextAlignment="Center" FontSize="20" Padding="20,10,20,10"/>
+
+    </StackLayout>
+
 </ContentPage>
