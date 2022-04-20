@@ -11,7 +11,7 @@ namespace Wordle_Project
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new WelcomePage());
+            MainPage = new NavigationPage(new StatisticPage());
         }
 
         protected override void OnStart()

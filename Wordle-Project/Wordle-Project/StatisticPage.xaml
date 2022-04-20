@@ -2,6 +2,46 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="WordleProject.StatisticPage">
+    x:Class="WordleProject.StatisticPage"
+    BackgroundColor="CornflowerBlue"
+    >
     
+
+
+    <StackLayout>
+        <Frame BackgroundColor="DeepSkyBlue" Padding="10" >
+            <Label Text="Your Statistics!"  HorizontalTextAlignment="Center" TextColor="White" FontSize="36" FontAttributes="Bold"  />
+            
+            
+            
+        </Frame>
+       
+
+
+            <Grid >
+
+
+                <BoxView/>
+                <Label Text="Score:" Grid.Column="0"  FontAttributes="Bold" FontSize="17"  HorizontalTextAlignment="Center" VerticalOptions="Center" TextDecorations="Underline" />
+                <Label x:Name="ScoreLabel" Text="1" Grid.Row="1" Grid.Column="0"  FontAttributes="Bold"  FontSize="50" HorizontalOptions="Center" VerticalOptions="Center"/>
+
+                <Label Text="Highest score:" Grid.Column="2"  FontAttributes="Bold"  FontSize="17"  HorizontalTextAlignment="Start" VerticalOptions="End" TextDecorations="Underline"  />
+                <Label x:Name="HighestScoreLabel" Text="2" Grid.Row="1" Grid.Column="2"  FontAttributes="Bold" FontSize="50" HorizontalOptions="Start" VerticalOptions="Center"/>
+
+                <Label Text="Guess  accuracy:" Grid.Row="2" Grid.Column="0"  FontAttributes="Bold" FontSize ="17" HorizontalTextAlignment="Center" VerticalOptions="Center" TextDecorations="Underline"  />
+                <Label x:Name="GuessAccuracyLabel" Text="3" Grid.Row="3" Grid.Column="0"  FontAttributes="Bold" FontSize="50" HorizontalOptions="Center" VerticalOptions="Center"/>
+
+                <Label Text="Chances of winning:" Grid.Row="2"  Grid.Column="2"  FontAttributes="Bold" FontSize="17" HorizontalOptions="Start" VerticalOptions="Center" TextDecorations="Underline" />
+                <Label x:Name="ChancesOfWinningLabel" Text="4" Grid.Row="3" Grid.Column="2"  FontAttributes="Bold"  FontSize="50" HorizontalOptions="Start" VerticalOptions="Center"/>
+
+            </Grid>
+        
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="Center"
+                         Padding="20"
+                        >
+                <Button Text="Back to Game" FontAttributes="Bold" WidthRequest="160"/>
+               
+            </StackLayout>
+    </StackLayout>
 </ContentPage>
