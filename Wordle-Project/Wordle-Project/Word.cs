@@ -17,6 +17,8 @@ namespace Wordle_Project
         // The word that the player has to guess
         public string TargetWord { get; private set; }
 
+        public bool isWordCorrect = false;
+
         public void GenerateTargetWord()
         {
             var random = new Random();
@@ -28,6 +30,8 @@ namespace Wordle_Project
         {
             if (guess == TargetWord)
             {
+                isWordCorrect = true;
+
                 // Guess is correct (All green)
                 return new List<string>() { "#179317", "#179317", "#179317", "#179317", "#179317" };
             }

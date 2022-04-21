@@ -10,17 +10,16 @@ namespace Wordle_Project
 {
     public partial class MainPage : ContentPage
     {
-        //Game game = new Game();
+        Game game = new Game();
 
         public MainPage()
         {
             InitializeComponent();
-            //game.StartGame();
+            game.StartGame();
         }
 
         private void Enter_Clicked(object sender, EventArgs e)
         {
-            Game game = new Game();
             if (game.WordObj.FullWordList.Contains(wordEntry.Text))
             {
                 var guessFeedback = game.WordObj.CheckPlayersGuess(wordEntry.Text);
@@ -45,6 +44,11 @@ namespace Wordle_Project
         private void MainMenu_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new WelcomePage());
+        }
+
+        private void EndGame()
+        {
+            // player.UpdateScore(playerWin, amountOfTurns)
         }
     }
 }
