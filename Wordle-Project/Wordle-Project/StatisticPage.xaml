@@ -2,7 +2,7 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="WordleProject.StatisticPage"
+    x:Class="Wordle_Project.StatisticPage"
     BackgroundColor="CornflowerBlue"
     >
     
@@ -40,7 +40,7 @@
                          HorizontalOptions="Center"
                          Padding="20"
                         >
-                <Button Text="Back to Game" FontAttributes="Bold" WidthRequest="160"/>
+                <Button x:Name="BackToGame" Text="Back to Game" FontAttributes="Bold" WidthRequest="160" Clicked="BackToGame_Clicked" />
                
             </StackLayout>
     </StackLayout>
