@@ -25,12 +25,6 @@ namespace Wordle_Project
         //Wins/GamesPlayed
         public static int WinningRate { get; private set; }
 
-
-
-        public Player()
-        {
-        }
-
         public void UpdateStats(bool DidPlayerWin, int amountOfTurns)
         {
             _listOfTurns.Add(amountOfTurns);
