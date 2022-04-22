@@ -40,7 +40,7 @@
                          HorizontalOptions="Center"
                          Padding="20"
                         >
-                <Button x:Name="BackToGame" Text="Back to Game" FontAttributes="Bold" WidthRequest="160" Clicked="BackToGame_Clicked" />
+                <Button x:Name="BackToMainMenu" Text="Back To Main Menu" FontAttributes="Bold" WidthRequest="160" Clicked="BackToMainMenu_Clicked"/>
                
             </StackLayout>
     </StackLayout>
