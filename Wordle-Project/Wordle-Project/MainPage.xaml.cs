@@ -76,6 +76,9 @@ namespace Wordle_Project
             {
                 gameMessage.Text = $"You lost. The correct word was {game.WordObj.TargetWord.ToUpper()}.";
             }
+
+            wordEntry.IsEnabled = false;
+            enterButton.IsEnabled = false;
         }
     }
 }

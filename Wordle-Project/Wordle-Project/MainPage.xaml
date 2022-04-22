@@ -6,12 +6,12 @@
 
     <StackLayout>
 
-        <StackLayout HorizontalOptions="Center" Orientation="Horizontal" Padding="0, 10, 0, 0">
+        <StackLayout HorizontalOptions="Center" Orientation="Horizontal" Padding="0, 20, 0, 0">
             <Entry x:Name="wordEntry" Placeholder="Enter a 5 Letter Word"/>
-            <Button Text="Enter" Clicked="Enter_Clicked"/>
+            <Button x:Name="enterButton" Text="Enter" Clicked="Enter_Clicked"/>
         </StackLayout>
 
-        <Label x:Name="gameMessage" Text="" HorizontalTextAlignment="Center" FontSize="20" Padding="30,10,30,30"/>
+        <Label x:Name="gameMessage" Text="" HorizontalTextAlignment="Center" FontSize="20" Padding="0,10,0,20"/>
         
         <StackLayout x:Name="row1Stack" HorizontalOptions="Center" Orientation="Horizontal">
             <Frame Background="#444444">
