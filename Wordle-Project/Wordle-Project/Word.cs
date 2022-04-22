@@ -48,6 +48,7 @@ namespace Wordle_Project
             var random = new Random();
             int index = random.Next(_usuableWords.Count); // Gets a random index
             TargetWord = _usuableWords[index].ToLower();
+            Console.WriteLine(TargetWord);
         }
 
         public List<string> CheckPlayersGuess(string guess)
@@ -72,6 +73,9 @@ namespace Wordle_Project
             char[] guessChars = guess.ToCharArray(); // Convert the guess word into a array of its characters
             char[] targetChars = TargetWord.ToCharArray(); // Convert the target word into a array of its characters
 
+            IDictionary<char, int> guessCharCount = GetWordCharCount(guessChars);
+            IDictionary<char, int> targetCharCount = GetWordCharCount(targetChars);
+
             for (int i = 0; i < guessChars.Length; i++)
             {
                 if (guessChars[i] == targetChars[i])
@@ -91,7 +95,53 @@ namespace Wordle_Project
                 }
             }
 
+            /* Handles situations where the guess word has double (or triple) letters, but the target word only has one of those letters. 
+             For example, if the guess word is "dress" and the target word is "sweat", this makes sure that only the first s of 
+            "dress" is marked yellow, and the other will be grey (before I ran into the problem of where both was marked as yellow)*/
+            foreach (var item in targetCharCount)
+            {
+                char letter = char.Parse(item.Key.ToString());
+
+                // Checks to see if: the letter is the same in both words, the letter count is 1 in the target word, and greater than/equal to 2 in the guess word
+                if (guessCharCount.ContainsKey(item.Key) && item.Value == 1 && guessCharCount[letter] >= 2)
+                {
+                    int lastYellowIndex = 0;
+
+                    // Gets the last occurance where the letter is marked as yellow
+                    for (int i = 0;i < guessChars.Length; i++)
+                    {
+                        if (guessChars[i] == letter && wordFeedback[i] == "#cc9c1d")
+                        {
+                            lastYellowIndex = i;
+                        }
+                    }
+
+                    // Then changes the colour of that letter position to grey
+                    wordFeedback[lastYellowIndex] = "#696969";
+                }
+            }
+
             return wordFeedback;
+        }
+
+        // Gets the amount of times each letter is in the word. For example, the word "guess" has: 1 g, 1 u, 1 e, and 2 s
+        private IDictionary<char, int> GetWordCharCount(char[] charArray)
+        {
+            IDictionary<char, int> charCount = new Dictionary<char, int>();
+
+            foreach (char c in charArray)
+            {
+                if (!charCount.ContainsKey(c))
+                {
+                    charCount[c] = 1;
+                }
+                else
+                {
+                    charCount[c]++;
+                }
+            }
+
+            return charCount;
         }
     }
 }
