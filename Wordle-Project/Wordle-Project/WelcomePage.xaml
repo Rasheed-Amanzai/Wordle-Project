@@ -21,8 +21,9 @@
             </Grid>
     </StackLayout>
         <StackLayout Padding="50">
-        <Button Text="Start Game" TextColor="Black"  BackgroundColor="GreenYellow" BorderColor="Black" BorderWidth="1" FontAttributes="Bold" Clicked="Button_Clicked"/>
-       
+        <Button x:Name="StartGameButton" Text="Start Game" TextColor="Black"  BackgroundColor="GreenYellow" BorderColor="Black" BorderWidth="1" FontAttributes="Bold" Clicked="StartGameButton_Clicked"/>
+        <Button x:Name="InstructionsButton" Text="Instructions" TextColor="Black"  BackgroundColor="GreenYellow" BorderColor="Black" BorderWidth="1" FontAttributes="Bold" Clicked="InstructionsButton_Clicked" />
+       <Button x:Name="StatsButton" Text="Your Stats" TextColor="Black"  BackgroundColor="GreenYellow" BorderColor="Black" BorderWidth="1" FontAttributes="Bold" Clicked="StatsButton_Clicked"/>
         </StackLayout>
 
      </StackLayout>
