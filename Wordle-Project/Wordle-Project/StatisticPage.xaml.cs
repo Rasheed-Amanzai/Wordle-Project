@@ -15,19 +15,19 @@ namespace Wordle_Project
         {
 
             InitializeComponent();
-            Player plyr = new Player();
+        
 
-            string ScoreLabelInt = Convert.ToString(plyr.Score);
-            ScoreLabel.Text = ScoreLabelInt;
+            string WinsString = Convert.ToString(Player.Wins);
+            WinsLabel.Text = WinsString;
 
-            string HighestScoreLabelInt = Convert.ToString(plyr.HighestScore);
-            HighestScoreLabel.Text = HighestScoreLabelInt;
+            string LosesString = Convert.ToString(Player.Loses);
+            LosesLabel.Text = LosesString;
 
-            string GuessAccuracyInt = Convert.ToString(plyr.GuessAccuracy);
-            GuessAccuracyLabel.Text = GuessAccuracyInt;
+            string GuessAccuracyString = Convert.ToString(Player.GuessAccuracy);
+            GuessAccuracyLabel.Text = GuessAccuracyString;
 
-            string ChancesOfWinningInt = Convert.ToString(plyr.ChancesOfWinning);
-            HighestScoreLabel.Text = HighestScoreLabelInt;
+            string WinningRateString = Convert.ToString(Player.WinningRate);
+            WinningRateLabel.Text = WinningRateString;
 
 
 

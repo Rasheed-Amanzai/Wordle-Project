@@ -7,23 +7,44 @@ namespace Wordle_Project
 
     public class Player
     {
-        //how many words did player guessed correctly
-        public int Score { get; set; } 
-        //player's highest score
-        public int HighestScore { get; private set; }
+        //How many words did player guessed correctly
+        public static int Wins { get; set; }
 
-        //how many guesses does it take player to guess the word correctly
-        public int GuessAccuracy { get; private set; }
+        //Player's games loss
+        public static int Loses { get; private set; }
 
-        //percent of winning for player 
-        public double ChancesOfWinning { get; private set; }
 
-        //numOfGamesWon(_score)/numOfGamesPlayed
-        public int WinningStreak { get; private set; }
+        //list of turns - turns for each game
+        public static List<int> _listOfTurns;
+        //How many guesses does it take player to guess the word correctly
+        public static int GuessAccuracy { get; private set; }
+
+        //Number of Games Played
+        public static int NumOfGamesPlayed { get; private set; }
+
+        //Wins/GamesPlayed
+        public static double WinningRate { get; private set; }
+
+
 
         public Player()
         {
-            Score = 11;
+        }
+
+        public void UpdateStats(bool DidPlayerWin, int amountOfTurns)
+        {
+            _listOfTurns.Add(amountOfTurns);
+
+            if (DidPlayerWin == true)
+                Wins += 1;
+            else
+                Loses += 1;
+
+            GuessAccuracy = Stats.GetGuessAccuracy();
+            WinningRate = Stats.GetWinningRate();
+
+            NumOfGamesPlayed += 1;
+
         }
 
 
