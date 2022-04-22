@@ -27,7 +27,7 @@ namespace Wordle_Project
             GuessAccuracyLabel.Text = GuessAccuracyString;
 
             string WinningRateString = Convert.ToString(Player.WinningRate);
-            WinningRateLabel.Text = WinningRateString;
+            WinningRateLabel.Text = $"{WinningRateString}%";
 
 
 
@@ -35,11 +35,12 @@ namespace Wordle_Project
 
         }
 
-        void BackToGame_Clicked(System.Object sender, System.EventArgs e)
+     
+
+        void BackToMainMenu_Clicked(System.Object sender, System.EventArgs e)
         {
-            Navigation.PushAsync(new MainPage());
+            Navigation.PushAsync(new WelcomePage());
         }
-
 
     }
 }

@@ -25,7 +25,9 @@ namespace Wordle_Project
 
         public static double GetWinningRate()
         {
-            return (Player.Wins/Player.NumOfGamesPlayed);
+            double Wins = Player.Wins;
+            double PlayedGames = Player.NumOfGamesPlayed;
+            return (Wins/PlayedGames)*100;
         }
     }
 }
