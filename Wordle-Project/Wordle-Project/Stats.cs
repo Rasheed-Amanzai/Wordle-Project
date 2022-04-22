@@ -27,7 +27,9 @@ namespace Wordle_Project
         {
             double Wins = Player.Wins;
             double PlayedGames = Player.NumOfGamesPlayed;
-            return (Wins/PlayedGames)*100;
+     
+
+            return(Wins/PlayedGames)*100;
         }
     }
 }

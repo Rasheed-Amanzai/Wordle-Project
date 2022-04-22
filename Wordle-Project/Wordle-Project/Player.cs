@@ -23,7 +23,7 @@ namespace Wordle_Project
         public static int NumOfGamesPlayed { get; private set; }
 
         //Wins/GamesPlayed
-        public static double WinningRate { get; private set; }
+        public static int WinningRate { get; private set; }
 
 
 
@@ -42,7 +42,7 @@ namespace Wordle_Project
                 Loses += 1;
 
             GuessAccuracy = Stats.GetGuessAccuracy();
-            WinningRate = Stats.GetWinningRate();
+            WinningRate = Convert.ToInt32(Stats.GetWinningRate());
 
         }
 
