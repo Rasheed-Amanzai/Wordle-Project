@@ -10,26 +10,27 @@ namespace Wordle_Project
 {
     public partial class MainPage : ContentPage
     {
-        //Game game = new Game();
+        Game game = new Game();
         List<StackLayout> rowStacks;
 
         public MainPage()
         {
             InitializeComponent();
-            //game.StartGame();
+            game.WordObj.ReadWordFiles();
+            game.StartGame();
             rowStacks = new List<StackLayout>() { row1Stack, row2Stack, row3Stack, row4Stack, row5Stack, row6Stack };
         }
 
         private void Enter_Clicked(object sender, EventArgs e)
         {
-            Game game = new Game(); // remove this later
             string guess = wordEntry.Text.ToLower();
             char[] guessChars = guess.ToUpper().ToCharArray();
 
             if (game.WordObj.FullWordList.Contains(guess))
             {
+                gameMessage.Text = "";
                 var guessFeedback = game.WordObj.CheckPlayersGuess(guess);
-                var stackChildren = rowStacks[0].Children;
+                var stackChildren = rowStacks[game.CurrentTurn - 1].Children;
 
                 for (int i = 0; i < 5; i++)
                 {
@@ -39,35 +40,23 @@ namespace Wordle_Project
                     var label = (Label)frame.Children[0];
                     label.Text = Convert.ToString(guessChars[i]);
                 }
+
+                if (game.WordObj.isWordCorrect || game.CurrentTurn == 6)
+                {
+                    EndGame();
+                }
+
+                game.CurrentTurn += 1;
             }
             else
             {
                 gameMessage.Text = "Invalid Input!";
             }
-
-            if (game.WordObj.isWordCorrect || game.CurrentTurn == 6)
-            {
-                EndGame();
-            }
-
-            game.CurrentTurn += 1;
         }
 
         private void Reset_Clicked(object sender, EventArgs e)
         {
-            foreach (var row in rowStacks)
-            {
-                for (int i = 0; i < 5; i++)
-                {
-                    var frame = (Frame)row.Children[i];
-                    frame.Background = new SolidColorBrush(Color.FromHex("#444444"));
-
-                    var label = (Label)frame.Children[0];
-                    label.Text = "";
-                }
-            }
-
-            //game.StartGame();
+            Navigation.PushAsync(new MainPage());
         }
 
         private void MainMenu_Clicked(object sender, EventArgs e)
@@ -77,15 +66,15 @@ namespace Wordle_Project
 
         private void EndGame()
         {
-            // game.PlayerObj.UpdateStats(game.WordObj.isWordCorrect, game.CurrentTurn)
+            game.PlayerObj.UpdateStats(game.WordObj.isWordCorrect, game.CurrentTurn);
 
-            //if (game.WordObj.isWordCorrect)
+            if (game.WordObj.isWordCorrect)
             {
                 gameMessage.Text = "You won! Click RESET to play again.";
             }
-            //else
+            else
             {
-                gameMessage.Text = "You lost. Click RESET to play again.";
+                gameMessage.Text = $"You lost. The correct word was {game.WordObj.TargetWord.ToUpper()}.";
             }
         }
     }

@@ -15,7 +15,7 @@ namespace Wordle_Project
 
 
         //list of turns - turns for each game
-        public static List<int> _listOfTurns;
+        public static List<int> _listOfTurns = new List<int>();
         //How many guesses does it take player to guess the word correctly
         public static int GuessAccuracy { get; private set; }
 
@@ -34,6 +34,7 @@ namespace Wordle_Project
         public void UpdateStats(bool DidPlayerWin, int amountOfTurns)
         {
             _listOfTurns.Add(amountOfTurns);
+            NumOfGamesPlayed += 1;
 
             if (DidPlayerWin == true)
                 Wins += 1;
@@ -42,8 +43,6 @@ namespace Wordle_Project
 
             GuessAccuracy = Stats.GetGuessAccuracy();
             WinningRate = Stats.GetWinningRate();
-
-            NumOfGamesPlayed += 1;
 
         }
 

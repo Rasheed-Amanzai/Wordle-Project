@@ -3,21 +3,45 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Reflection;
 
 namespace Wordle_Project
 {
     public class Word
     {
         // List of common words that the program will choose from as the word that needs to be guessed
-        private List<string> _usuableWords = File.ReadAllLines("UsuableWords.txt").ToList();
+        private List<string> _usuableWords = new List<string>();
 
         // Full list of words, any of these words will be viable as a guess
-        public List<string> FullWordList = File.ReadAllLines("FullWordList.txt").ToList();
+        public List<string> FullWordList = new List<string>();
 
         // The word that the player has to guess
         public string TargetWord { get; private set; }
 
         public bool isWordCorrect = false;
+
+        public void ReadWordFiles()
+        {
+            var assembly = IntrospectionExtensions.GetTypeInfo(typeof(MainPage)).Assembly;
+            Stream stream1 = assembly.GetManifestResourceStream("Wordle-Project.UsuableWords.txt");
+            Stream stream2 = assembly.GetManifestResourceStream("Wordle-Project.FullWordList.txt");
+
+            using (var reader = new System.IO.StreamReader(stream1))
+            {
+                while(!reader.EndOfStream)
+                {
+                    _usuableWords.Add(reader.ReadLine());
+                }
+            }
+
+            using (var reader = new System.IO.StreamReader(stream2))
+            {
+                while (!reader.EndOfStream)
+                {
+                    FullWordList.Add(reader.ReadLine());
+                }
+            }
+        }
 
         public void GenerateTargetWord()
         {
