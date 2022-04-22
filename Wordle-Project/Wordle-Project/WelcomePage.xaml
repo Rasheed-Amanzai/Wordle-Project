@@ -2,7 +2,8 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="Wordle_Project.WelcomePage" >
+    x:Class="Wordle_Project.WelcomePage"
+    BackgroundColor="White">
    
     <StackLayout>
         <Frame BackgroundColor="#B6DF" Padding="20" >
@@ -12,25 +13,25 @@
             <Grid ScaleX="1" ScaleY="0.99">
           
                 <BoxView HorizontalOptions="Center" CornerRadius="100" />
-                <Label Text="W" Grid.Column="0"  FontAttributes="Bold" BackgroundColor="#89CFF0"  FontSize="40" HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" WidthRequest="900" HeightRequest="70" VerticalTextAlignment="Center"  />
+                <Label Text="W" Grid.Column="0"  FontAttributes="Bold" BackgroundColor="#89CFF0"  FontSize="40" HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" WidthRequest="900" HeightRequest="70" VerticalTextAlignment="Center" TextColor="Black" />
 
                 <Frame HeightRequest="70" WidthRequest="900" Padding="0" Grid.Column="1">
-                <Label Text="O" Grid.Column="1"  FontAttributes="Bold" BackgroundColor="#F0FFFF" FontSize="40" HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" WidthRequest="900" HeightRequest="70" VerticalTextAlignment="Center"  />
+                <Label Text="O" Grid.Column="1"  FontAttributes="Bold" BackgroundColor="#F0FFFF" FontSize="40" HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" WidthRequest="900" HeightRequest="70" VerticalTextAlignment="Center" TextColor="Black" />
                 </Frame>
 
 
 
-                <Label Text ="R" Grid.Column="2" FontAttributes="Bold" BackgroundColor="#89CFF0" FontSize="40" HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" WidthRequest="900" HeightRequest="70" VerticalTextAlignment="Center" />
+                <Label Text ="R" Grid.Column="2" FontAttributes="Bold" BackgroundColor="#89CFF0" FontSize="40" HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" WidthRequest="900" HeightRequest="70" VerticalTextAlignment="Center" TextColor="Black" />
 
                 <Frame HeightRequest="70" WidthRequest="900" Padding="0" Grid.Column="3">
-                <Label Text ="D" Grid.Column="3"  FontAttributes="Bold" BackgroundColor="#F0FFFF" FontSize="40" HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" WidthRequest="900" HeightRequest="70" VerticalTextAlignment="Center" />
+                <Label Text ="D" Grid.Column="3"  FontAttributes="Bold" BackgroundColor="#F0FFFF" FontSize="40" HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" WidthRequest="900" HeightRequest="70" VerticalTextAlignment="Center" TextColor="Black"  />
                 </Frame>
 
-                <Label Text ="L" Grid.Column="4"  FontAttributes="Bold" BackgroundColor="#89CFF0" FontSize="40" HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" WidthRequest="900" HeightRequest="70" VerticalTextAlignment="Center" />
+                <Label Text ="L" Grid.Column="4"  FontAttributes="Bold" BackgroundColor="#89CFF0" FontSize="40" HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" WidthRequest="900" HeightRequest="70" VerticalTextAlignment="Center" TextColor="Black"/>
 
 
                 <Frame HeightRequest="60" WidthRequest="900" Padding="0" Grid.Column="5">
-                <Label Text ="E" Grid.Column="5"  FontAttributes="Bold" BackgroundColor="#F0FFFF" FontSize="40" HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" WidthRequest="900" HeightRequest="70" VerticalTextAlignment="Center" />
+                <Label Text ="E" Grid.Column="5"  FontAttributes="Bold" BackgroundColor="#F0FFFF" FontSize="40" HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" WidthRequest="900" HeightRequest="70" VerticalTextAlignment="Center" TextColor="Black" />
                 </Frame>
             </Grid>
     </StackLayout>
