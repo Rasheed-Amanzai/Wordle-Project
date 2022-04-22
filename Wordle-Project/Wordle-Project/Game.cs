@@ -8,7 +8,7 @@ namespace Wordle_Project
     {
         private int _maxNumTurns = 6;
 
-        public int CurrentTurn { get; private set; }
+        public int CurrentTurn { get; set; }
 
         public Player PlayerObj = new Player();
 
@@ -16,7 +16,7 @@ namespace Wordle_Project
 
         public void StartGame()
         {
-            CurrentTurn = 0;
+            CurrentTurn = 1;
             
             WordObj.GenerateTargetWord();
         }

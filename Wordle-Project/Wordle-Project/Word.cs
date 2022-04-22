@@ -23,7 +23,7 @@ namespace Wordle_Project
         {
             var random = new Random();
             int index = random.Next(_usuableWords.Count); // Gets a random index
-            TargetWord = _usuableWords[index];
+            TargetWord = _usuableWords[index].ToLower();
         }
 
         public List<string> CheckPlayersGuess(string guess)
@@ -35,15 +35,10 @@ namespace Wordle_Project
                 // Guess is correct (All green)
                 return new List<string>() { "#179317", "#179317", "#179317", "#179317", "#179317" };
             }
-            else if (FullWordList.Contains(guess))
+            else
             {
                 // Guess is incorrect, but is a valid word
                 return GetWordFeedback(guess);
-            }
-            else
-            {
-                // Guess is a invalid word
-                return new List<string>();
             }
         }
 

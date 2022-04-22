@@ -1,5 +1,5 @@
 ﻿using System;
-using WordleProject;
+using Wordle_Project;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,7 +11,7 @@ namespace Wordle_Project
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new StatisticPage());
+            MainPage = new NavigationPage(new WelcomePage());
         }
 
         protected override void OnStart()

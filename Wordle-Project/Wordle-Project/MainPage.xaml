@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Wordle_Project.MainPage">
+             x:Class="Wordle_Project.MainPage"
+             NavigationPage.HasNavigationBar="False">
 
     <StackLayout>
 
@@ -10,7 +11,7 @@
             <Button Text="Enter" Clicked="Enter_Clicked"/>
         </StackLayout>
 
-        <Label x:Name="gameMessage" Text="[Game Messages Here]" HorizontalTextAlignment="Center" FontSize="20" Padding="30,10,30,30"/>
+        <Label x:Name="gameMessage" Text="" HorizontalTextAlignment="Center" FontSize="20" Padding="30,10,30,30"/>
         
         <StackLayout x:Name="row1Stack" HorizontalOptions="Center" Orientation="Horizontal">
             <Frame Background="#444444">
@@ -40,7 +41,7 @@
             </Frame>
         </StackLayout>
 
-        <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+        <StackLayout x:Name="row2Stack" HorizontalOptions="Center" Orientation="Horizontal">
             <Frame Background="#444444">
                 <Label Text="" FontSize="30" WidthRequest="30"
                    HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
@@ -68,7 +69,7 @@
             </Frame>
         </StackLayout>
 
-        <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+        <StackLayout x:Name="row3Stack" HorizontalOptions="Center" Orientation="Horizontal">
             <Frame Background="#444444">
                 <Label Text="" FontSize="30" WidthRequest="30"
                    HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
@@ -96,7 +97,7 @@
             </Frame>
         </StackLayout>
 
-        <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+        <StackLayout x:Name="row4Stack" HorizontalOptions="Center" Orientation="Horizontal">
             <Frame Background="#444444">
                 <Label Text="" FontSize="30" WidthRequest="30"
                    HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
@@ -124,7 +125,7 @@
             </Frame>
         </StackLayout>
 
-        <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+        <StackLayout x:Name="row5Stack" HorizontalOptions="Center" Orientation="Horizontal">
             <Frame Background="#444444">
                 <Label Text="" FontSize="30" WidthRequest="30"
                    HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
@@ -152,7 +153,7 @@
             </Frame>
         </StackLayout>
 
-        <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+        <StackLayout x:Name="row6Stack" HorizontalOptions="Center" Orientation="Horizontal">
             <Frame Background="#444444">
                 <Label Text="" FontSize="30" WidthRequest="30"
                    HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
