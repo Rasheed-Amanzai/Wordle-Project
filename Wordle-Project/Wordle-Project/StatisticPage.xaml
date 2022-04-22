@@ -32,7 +32,7 @@
                 <Label x:Name="GuessAccuracyLabel" Text="3" Grid.Row="3" Grid.Column="0"  FontAttributes="Bold" FontSize="50" HorizontalOptions="Center" VerticalOptions="Center"/>
 
                 <Label Text="Winning Rate:" Grid.Row="2"  Grid.Column="2"  FontAttributes="Bold" FontSize="17" HorizontalOptions="Start" VerticalOptions="Center" TextDecorations="Underline" />
-                <Label x:Name="WinningRateLabel" Text="4" Grid.Row="3" Grid.Column="2"  FontAttributes="Bold"  FontSize="50" HorizontalOptions="Start" VerticalOptions="Center"/>
+                <Label x:Name="WinningRateLabel" Text="4" Grid.Row="3" Grid.Column="2"  FontAttributes="Bold"  FontSize="40" HorizontalOptions="Start" VerticalOptions="Center"/>
 
             </Grid>
         
