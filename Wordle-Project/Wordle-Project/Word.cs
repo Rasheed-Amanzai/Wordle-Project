@@ -48,7 +48,6 @@ namespace Wordle_Project
             var random = new Random();
             int index = random.Next(_usuableWords.Count); // Gets a random index
             TargetWord = _usuableWords[index].ToLower();
-            Console.WriteLine(TargetWord);
         }
 
         public List<string> CheckPlayersGuess(string guess)
