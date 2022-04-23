@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+Author: Rasheed Amanzai
+
+The Word.cs file manages all the information and tasks related to the words, such as: 
+list(s) of words, generating a random target word, checking the player’s guess and returning feedback, etc.
+*/
+
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;

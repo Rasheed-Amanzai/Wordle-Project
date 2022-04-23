@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+Author: Rasheed Amanzai
+
+The MainPage.xaml.cs file manages various tasks in the Wordle game/UI. These are things like
+providing functionality to the entry and buttons, updating the tiles based on the player's guess,
+and ending game.
+*/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
