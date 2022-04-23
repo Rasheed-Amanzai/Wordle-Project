@@ -4,7 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="Wordle_Project.WelcomePage"
     BackgroundColor="White">
-   
+   <!-- This UI class includes how the title was made, and the 3 buttons to direct the user to the different pages the app offers-->
     <StackLayout>
         <Frame BackgroundColor="#B6DF" Padding="20" >
             <Label Text="WELCOME TO  " HorizontalTextAlignment="Center" TextColor="White" FontAttributes="Bold"  FontSize="36" />

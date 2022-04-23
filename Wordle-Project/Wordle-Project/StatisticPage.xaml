@@ -4,10 +4,9 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="Wordle_Project.StatisticPage"
     BackgroundColor="CornflowerBlue"
-    >
-    
+    >    
 
-
+    <!-- Fiorella - UI class of statistics to show statistics through Labels and a button to go back to the welcome page which is also used as a main menu-->
     <StackLayout>
         <Frame BackgroundColor="DeepSkyBlue" Padding="10" >
             <Label Text="Your Statistics!"  HorizontalTextAlignment="Center" TextColor="White" FontSize="36" FontAttributes="Bold"  />

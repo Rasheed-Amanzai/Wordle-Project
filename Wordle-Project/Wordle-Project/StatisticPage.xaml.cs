@@ -9,6 +9,12 @@ using Xamarin.Forms;
 
 namespace Wordle_Project
 {
+    //Fiorella - StatisticPage is used to take the labels (WinsLabel, LosesLabel, GuessAccuracyLabel, WinningRateLabel)
+    //from StatisticPage.xaml and putting value to them with the actual values of the stats,
+    //also the actual stats values are converted into string as labels operate with strings.
+    //Additionally, this page makes the connection between the button BackToMainMenu and WelcomePage()
+    //which leads user to WelcomePage as soon as it is Clicked
+
     public partial class StatisticPage : ContentPage
     {
         public StatisticPage()

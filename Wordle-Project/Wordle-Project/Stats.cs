@@ -5,16 +5,13 @@ using System.Linq;
 
 namespace Wordle_Project
 {
+    // Fiorella - Class Stats is used to make calculations for some of the properties of class Player
+    // This class has 2 methods, GetGuessAccuracy() and GetWinningRate(), GetGuessAccuracy() returns a value for GuessAccuracy and
+    // GetWinningRate() returns a value for WinningRate
     public class Stats
     {
 
-        //Number of Games Played
-        //public static int ChancesOfWinning { get; private set; }
-
-        ////Wins/GamesPlayed
-        //public static double WinningRate { get; private set; }
-
-
+       
 
         //How many turns does it take player to guess the word correctly
         public static int GetGuessAccuracy()
@@ -23,6 +20,7 @@ namespace Wordle_Project
             return AvgTurns;
         }
 
+        //Returns a percentage of winning rate
         public static double GetWinningRate()
         {
             double Wins = Player.Wins;

@@ -5,6 +5,8 @@ using Xamarin.Forms;
 
 namespace Wordle_Project
 {
+    // WelcomePage class is used to create the connections between StartGameButton, InstructionButton, StatsButton
+    // to MainPage (game page), InstructionPage and StatisticPage respectively
     public partial class WelcomePage : ContentPage
     {
         public WelcomePage()
