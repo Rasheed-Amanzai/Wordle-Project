@@ -4,7 +4,9 @@ using System.Text;
 
 namespace Wordle_Project
 {
-
+    //Fiorella - This class Player includes important properties of a player specifically as other classes such as Stats and StatisticPage use them.
+    //Class Player also has a method called UpdateStats() which is called by a method called EndGame() in MainPage.xaml.cs
+    //UpdateStats updates some properties of Player.
     public class Player
     {
         //How many words did player guessed correctly
